@@ -11,9 +11,8 @@ function addHistory(questionText, timeTaken, errorCount) {
   <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
   </div>
   `;
-
-  const history = histories.appendChild(newRow);
-  console.log(history);
+  const history = histories.appendChild(newRow)
+  console.log(history)
 
   let previousTests = JSON.parse(localStorage.getItem("testHistory")) || [];
   previousTests.push({ questionText, timeTaken, errorCount });
