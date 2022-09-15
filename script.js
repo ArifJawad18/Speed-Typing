@@ -23,7 +23,6 @@ fetch("./texts.json")
 const typeController = (e) => {
   const newLetter = e.key;
 
-
   // Handle backspace press
   if (newLetter == "Backspace") {
     userText = userText.slice(0, userText.length - 1);
@@ -56,14 +55,12 @@ const typeController = (e) => {
   }
 }
 
-
 const validate = (key) => {
   if (key === questionText[userText.length - 1]) {
     return true;
   }
   return false;
 };
-
 
 // FINISHED TYPING
 const gameOver = () => {
@@ -138,7 +135,6 @@ displayHistory();
 setInterval(() => {
   const currentTime = new Date().getTime();
   const timeSpent = (currentTime - startTime) / 1000;
-
 
   document.getElementById("show-time").innerText = parseInt(`${startTime ? timeSpent : 0} seconds`);
 }, 1000);
